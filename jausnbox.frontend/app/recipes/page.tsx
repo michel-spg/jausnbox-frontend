@@ -7,7 +7,6 @@ async function getRecipes(): Promise<Recipe[] | null> {
   const response = await fetch("http://localhost:3001/api/recipes");
   if (!response.ok) return null;
   const result = await response.json();
-  // console.log(result);
   return result;
 }
 
